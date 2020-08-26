@@ -21,7 +21,17 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/tinymce",
+                "output": "assets/tinymce/"
+              },
+              {
+                "glob": "**/*.js",
+                "input": "node_modules/tinymce/themes/silver",
+                "output": "assets/tinymce/themes/silver"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -120,6 +130,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "tinymcetest"
 }

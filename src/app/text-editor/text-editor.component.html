@@ -1,0 +1,22 @@
+<editor (ngModelChange)="textChange()" [(ngModel)]="content" [init]="{
+  height: 500,
+  menubar: true,
+  branding: false,
+  theme_url: '/assets/tinymce/themes/silver/theme.min.js',
+  base_url: '/assets/tinymce/',
+  toolbar: 'undo redo | styleselect | bold bullist numlist | link | table | code  ',
+  plugins: [
+    'advlist autolink lists link image charmap print preview anchor',
+    'searchreplace visualblocks code fullscreen',
+    'insertdatetime media table paste code help wordcount'
+  ],
+  menu: {
+    edit: { title: 'Edit', items: 'undo redo | cut copy paste pastetext | searchreplace selectall' },
+    insert: { title: 'Insert', items: 'image media link inserttable hr charmap' },
+    view: { title: 'View', items: 'code preview' },
+    format: { title: 'Format', items: 'bold superscript subscript | formats | removeformat' },
+    table: { title: 'Table', items: 'inserttable tableprops deletetable | cell row column' },
+    file: { title: 'File', items: '' },
+    tools: { title: 'Tools', items: '' }
+  }
+}"></editor>
